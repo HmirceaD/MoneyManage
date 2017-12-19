@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1025502702825",
+    "firebase_url": "https://moneymanage-8d193.firebaseio.com",
+    "project_id": "moneymanage-8d193",
+    "storage_bucket": "moneymanage-8d193.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025502702825:android:f84d0202ab8f9d33",
+        "android_client_info": {
+          "package_name": "com.example.maruta.moneymanage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025502702825-erhalticfnrgcpbnjfcctpi5r4gqa0sb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.maruta.moneymanage",
+            "certificate_hash": "4e4619ef9dbd5bd371ff9707710f271b786709da"
+          }
+        },
+        {
+          "client_id": "1025502702825-vtra2892gfpfjjdclnfgoakvrjlgtnkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPAqSVof08i-XSvb54Y1DCuShkMVncGDc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025502702825-vtra2892gfpfjjdclnfgoakvrjlgtnkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

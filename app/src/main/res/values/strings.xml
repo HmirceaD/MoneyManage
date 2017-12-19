@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MoneyManage</string>
+    <string name="settings">settings_button</string>
+
+    <string-array name="currency_array">
+        <item>Leu</item>
+        <item>US Dollar $</item>
+        <item>Euro €</item>
+        <item>British Pound £</item>
+    </string-array>
+</resources>
