@@ -1,13 +1,17 @@
 package com.example.maruta.moneymanage;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -15,6 +19,10 @@ public class SettingsActivity extends AppCompatActivity {
 
     private Toolbar appBar;
     private Spinner currencySpinner;
+
+    private SharedPreferences sh;
+
+    private String crr_val[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +36,9 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void initUi() {
 
+        sh = getSharedPreferences("com.example.maruta.moneymanage", Context.MODE_PRIVATE);
+        crr_val = getResources().getStringArray(R.array.currency_values);
+
         currencySpinner = findViewById(R.id.currencySpinner);
 
         ArrayAdapter<CharSequence> spinnerAdp = ArrayAdapter.createFromResource(this,
@@ -37,6 +48,19 @@ public class SettingsActivity extends AppCompatActivity {
 
         currencySpinner.setAdapter(spinnerAdp);
 
+        currencySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                sh.edit().putString("Currency", crr_val[position]).apply();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     private void initToolbar() {
